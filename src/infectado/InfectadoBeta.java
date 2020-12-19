@@ -13,6 +13,7 @@ public class InfectadoBeta extends Infectado{
 	public InfectadoBeta (Point posicionCreacion) {
 		super(posicionCreacion);
 		entidadGrafica= new EntidadGraficaInfectadoBeta();
+		this.id= this.hashCode();
 	}
 
 	public void recibirAtaque(int poderAtaqueRecibido) {

@@ -64,4 +64,8 @@ public class Nivel{
     public void update() {
         oleadaEnemigos.update();
     }
+
+	public OleadaEnemigos getOleadaEnemigos() {
+		return oleadaEnemigos;
+	}
 }

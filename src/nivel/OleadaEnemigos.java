@@ -1,5 +1,10 @@
 package nivel;
 
+import java.util.List;
+import java.util.Map.Entry;
+
+import infectado.Infectado;
+
 public interface OleadaEnemigos {
     
     /**
@@ -23,6 +28,8 @@ public interface OleadaEnemigos {
      * Se encarga de actualizar la oleada de enemigos.
      */
     public void update();
+
+	public List<Entry<Integer, Infectado>> getOleada();
 
     //public void freezeEnemigos();
 }

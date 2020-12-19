@@ -71,6 +71,8 @@ public abstract class OleadaEnemigosState {
 
             posX += distanciamientoEntreInfectado;
         }
+        
+    
     }
 
     /**
@@ -116,6 +118,8 @@ public abstract class OleadaEnemigosState {
             }
             enemigosActivos.clear();
             enemigosActivos= enemigosActivosActuales;
+            
+            
 
           //  if (enemigosActivos.isEmpty() && (oleadasCompletadas < cantOleadas)) {
             if (enemigosActivos.isEmpty() && (oleadasCompletadas < cantOleadas)) {
@@ -161,5 +165,9 @@ public abstract class OleadaEnemigosState {
              
         }
         
+    }
+    
+    public List<Entry<Integer, Infectado>> getOleada(){
+    	return enemigosActivos;
     }
 }

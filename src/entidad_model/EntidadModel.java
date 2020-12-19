@@ -1,6 +1,15 @@
 package entidad_model;
 
+import java.awt.Point;
+import java.util.List;
+import java.util.Map.Entry;
+
+import javax.swing.ImageIcon;
+import entidadGrafica.*;
 import game_master.GameMaster;
+import infectado.Infectado;
+import nivel.Nivel;
+import nivel.NivelController;
 import view.UIUpdater;
 
 public abstract class EntidadModel {
@@ -42,5 +51,17 @@ public abstract class EntidadModel {
      * 
      * @see UIUpdater#generarLabel(int, java.awt.Point, int, int, javax.swing.ImageIcon)
      */
-    public abstract void generarLabel();
+    public void generarLabel() {
+    	
+    	NivelController nivelControler= gameMaster.getNivelController();
+    	Nivel nivel = nivelControler.getNivel();
+    	List<Entry<Integer, Infectado>> enemigos= nivel.getOleadaEnemigos().getOleada();
+    	
+    	for(Entry<Integer,Infectado> entry : enemigos) {
+    	
+    		Point ubicacion= entry.getValue().getPosActual();
+    	}
+    	
+    	
+    }
 }

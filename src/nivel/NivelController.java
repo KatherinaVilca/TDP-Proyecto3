@@ -54,4 +54,8 @@ public class NivelController {
     public void update() {
         nivel.update();
     }
+    
+    public Nivel getNivel() {
+    	return this.nivel;
+    }
 }

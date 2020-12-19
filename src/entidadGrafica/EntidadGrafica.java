@@ -19,6 +19,10 @@ public abstract class EntidadGrafica extends JLabel{
     	return spriteIcon;
     };
     
+    public String[] getSprites() {
+    	return sprites;
+    }
+    
     public ImageIcon actualizarSprite(int movimiento) {
         this.spriteIcon = new ImageIcon( this.getClass().getResource( sprites[movimiento] ) );
         this.spriteIcon.setImage( this.spriteIcon.getImage() );

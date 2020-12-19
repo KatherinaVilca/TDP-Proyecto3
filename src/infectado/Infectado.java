@@ -20,7 +20,7 @@ public abstract class Infectado {
 	protected PremioFactory premioFactory;
 	protected int estado;
 	protected InfectadoVisitor visitor;
-	
+	protected int id;
 	public Infectado (Point posicionCreacion) {
 		
 		this.vida= 100;
@@ -32,6 +32,7 @@ public abstract class Infectado {
 		this.premioFactory= PremioFactoryImpl.getInstance();
 		this.accionActual= EstadosInfectado.DESPLAZANDOSE.getEstado();
 		this.visitor= new InfectadoVisitorImpl(this);
+		
 	}
 	
 	abstract void recibirAtaque (int poderAtaqueRecibido); // ABSTRACT 
@@ -63,7 +64,12 @@ public abstract class Infectado {
 	public boolean isAlive() {
 		return !(accionActual == EstadosInfectado.MUERTO.getEstado());
 	}
-	abstract ImageIcon getSprite();
 	
-	//abstract void actualizarSprite(int nuevoEstado) ;	
+	public ImageIcon getSprite() {
+		return entidadGrafica.getSprite();
+	}
+	
+	public Point getPosActual() {
+		return posActual;
+	}
 }
