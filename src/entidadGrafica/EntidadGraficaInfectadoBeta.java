@@ -6,7 +6,12 @@ public class EntidadGraficaInfectadoBeta extends EntidadGraficaInfectado {
 
 	public EntidadGraficaInfectadoBeta () {
 		
-		  this.spriteIcon = new ImageIcon( this.getClass().getResource( "/sprites/beta.png" ));
-		  this.spriteIcon.setImage( this.spriteIcon.getImage() );
+		this.sprites= new String [2];
+		
+		this.sprites[0] =  "/sprites/Zombies/zombie1quieto.png"; //QUIETO
+        this.sprites[1] = "/sprites/Zombies/zombiepieizq1.png";//MOV_IZQ
+      
 	}
-}
+
+	}
+

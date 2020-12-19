@@ -5,7 +5,9 @@ import javax.swing.JLabel;
 
 public abstract class EntidadGrafica extends JLabel{
 
-    protected ImageIcon spriteIcon;
+	protected ImageIcon spriteIcon;
+	protected String[] sprites;
+   
 
     public EntidadGrafica() {}
 
@@ -14,8 +16,14 @@ public abstract class EntidadGrafica extends JLabel{
      * @return El sprite actual que contiene la entidad grafica.
      */
     public ImageIcon getSprite() {
-       return spriteIcon;
-    }
+    	return spriteIcon;
+    };
     
+    public ImageIcon actualizarSprite(int movimiento) {
+        this.spriteIcon = new ImageIcon( this.getClass().getResource( sprites[movimiento] ) );
+        this.spriteIcon.setImage( this.spriteIcon.getImage() );
+        
+        return spriteIcon;
+    }
     
 }

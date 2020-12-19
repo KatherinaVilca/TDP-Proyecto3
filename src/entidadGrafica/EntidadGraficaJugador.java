@@ -7,15 +7,15 @@ public class EntidadGraficaJugador extends EntidadGrafica {
     private static EntidadGraficaJugador instance;
     
 
-    private String[] sprites;
+    //private String[] sprites;
 
     private EntidadGraficaJugador() {
 
         sprites = new String[4];
-        sprites[0] =  "/sprites/jugador.png"; //QUIETO
-        sprites[1] = "";//MOV_IZQ
-        sprites[2] = "";//MOV_DER
-        sprites[3] = "";//DISPARANDO
+        sprites[0] =  "/sprites/Player/quietoDerecha.png"; //QUIETO
+        sprites[1] = "/sprites/Player/completo1izq.png";//MOV_IZQ
+        sprites[2] = "/sprites/Player/completo1derechaActualizado.png";//MOV_DER
+        sprites[3] = "/sprites/Player/disparoarribaizq.png";//DISPARANDO
 
         this.spriteIcon = new ImageIcon( this.getClass().getResource( sprites[0] ) );
 		this.spriteIcon.setImage( this.spriteIcon.getImage() );
@@ -37,10 +37,12 @@ public class EntidadGraficaJugador extends EntidadGrafica {
      * @return El nuevo sprite que representa el movimiento parametrizado.
      */
     public ImageIcon actualizarSprite(int movimiento) {
+    	System.out.println("num: "+movimiento);
         this.spriteIcon = new ImageIcon( this.getClass().getResource( sprites[movimiento] ) );
         this.spriteIcon.setImage( this.spriteIcon.getImage() );
         
         return spriteIcon;
     }
+
 
 }
