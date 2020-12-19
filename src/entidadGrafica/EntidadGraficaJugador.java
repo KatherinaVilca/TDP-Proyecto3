@@ -37,7 +37,7 @@ public class EntidadGraficaJugador extends EntidadGrafica {
      * @return El nuevo sprite que representa el movimiento parametrizado.
      */
     public ImageIcon actualizarSprite(int movimiento) {
-    	System.out.println("num: "+movimiento);
+    	
         this.spriteIcon = new ImageIcon( this.getClass().getResource( sprites[movimiento] ) );
         this.spriteIcon.setImage( this.spriteIcon.getImage() );
         

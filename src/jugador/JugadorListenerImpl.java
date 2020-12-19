@@ -85,7 +85,7 @@ public class JugadorListenerImpl implements KeyListener, JugadorListener {
         synchronized(ultimoMovimiento) {
             movimientoJugador = ultimoMovimiento.get();
         }
-        System.out.println("movJugador: "+movimientoJugador);
+       
         return movimientoJugador;
     }
     

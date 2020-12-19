@@ -8,6 +8,7 @@ import entidadGrafica.*;
 public class InfectadoAlpha extends Infectado {
 	
 	//private DisparoInfectadoFactory disparoFactory;
+	
 	private InfectadoAlphaState state;
 	
 	public InfectadoAlpha(Point posicionCreacion) {
@@ -15,6 +16,8 @@ public class InfectadoAlpha extends Infectado {
 		state= new InfectadoAlphaNormalState(this);
 		//disparoFactory= new
 		entidadGrafica= new EntidadGraficaInfectadoAlpha();
+		entidadGrafica.actualizarSprite(1);
+		id= this.hashCode();
 	}
 	
 	public void recibirAtaque( int poderAtaqueRecibido) {

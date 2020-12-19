@@ -13,6 +13,7 @@ public class InfectadoBeta extends Infectado{
 	public InfectadoBeta (Point posicionCreacion) {
 		super(posicionCreacion);
 		entidadGrafica= new EntidadGraficaInfectadoBeta();
+		entidadGrafica.actualizarSprite(1);
 		this.id= this.hashCode();
 	}
 

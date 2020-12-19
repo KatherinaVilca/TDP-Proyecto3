@@ -60,6 +60,9 @@ public abstract class EntidadModel {
     	for(Entry<Integer,Infectado> entry : enemigos) {
     	
     		Point ubicacion= entry.getValue().getPosActual();
+    		ImageIcon img= entry.getValue().getSprite();
+    		uiUpdater.generarLabel(entry.getValue().getId(), ubicacion,img.getIconWidth(), img.getIconHeight(), img);
+    		
     	}
     	
     	

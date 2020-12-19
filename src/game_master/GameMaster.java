@@ -70,7 +70,7 @@ public class GameMaster extends Thread {
                  
 
                 int movimientoJugador = this.getUltimoMovimientoJugador();
-              //  System.out.println("frame: " + frames++);
+              
                 jugadorController.update(movimientoJugador);
                 
                 try {

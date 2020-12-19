@@ -21,6 +21,7 @@ public abstract class Infectado {
 	protected int estado;
 	protected InfectadoVisitor visitor;
 	protected int id;
+	
 	public Infectado (Point posicionCreacion) {
 		
 		this.vida= 100;
@@ -51,7 +52,7 @@ public abstract class Infectado {
 	
 	public Premio lanzarPremio() {
 	
-		return premioFactory.createPremio(posActual.getX(), posActual.getY());
+		return premioFactory.createPremio((int)posActual.getX(), (int)posActual.getY());
 	} 
 	
 	public int getVida() {
@@ -72,4 +73,8 @@ public abstract class Infectado {
 	public Point getPosActual() {
 		return posActual;
 	}
-}
+	public int getId() {
+		return id;
+	}
+	}
+
